@@ -1,3 +1,10 @@
+> **Private minimal determinism fork — EXL3 0.0.37.** Adds an opt-in inference
+> patch for upstream issue #353 (GDN-128 and fused-MoE accumulation). Original
+> quantization code and native quantized kernels are retained. Start with the
+> [patch instructions and limitations](doc/issue353-minimal-fix.md) and the
+> [validation report](doc/issue353-validation.md). Batch-size invariance is a
+> separate, unresolved property.
+
 
 # <img src="doc/cat.png" width="40"> ExLlamaV3
 

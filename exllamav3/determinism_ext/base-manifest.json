@@ -1,0 +1,20 @@
+{
+  "base_version": "0.0.37+cu128.torch2.9.0",
+  "upstream_gdn": "900cf17b1ebc87e80f68cdcf0e5a284ae28d2e0a",
+  "upstream_moe_design": "1c8aff478a787fe096d231f9a0eaacc23b08701e",
+  "native_files": {
+    "exllamav3_ext/gdn.cu": "1fc8df5ddbd557b925e2fec60d3a3249f7e42ad825687b2bf0262bc0038dc274",
+    "exllamav3_ext/quant/exl3_moe_kernel.cuh": "06dcb3453d5cdda45b7ab930f862922020ca5af7cf504619600aaffb8ce64e16",
+    "exllamav3_ext/quant/exl3_moe.cu": "404c1365ba04bff9d55ca1fb03db36e79771ea810b5d992b3182bda20cfb4ffa",
+    "modules/block_sparse_mlp.py": "afe90be13da5c14df5bcfecca6d0b0b2a9db0e59ca4342f1665d0f96a86960de",
+    "ext.py": "290f4bdb0f505135d448979bd239c77a9f6b5ed9d5c2b48b1b95b7a1b4bc4fcf"
+  },
+  "gdn_generated_sha256": "cac2cdf66eaf1168f70e75e971d481847e77c3c68af894fcda0ca65c1d14b78d",
+  "cuda_flags": [
+    "-O3",
+    "--use_fast_math",
+    "-lineinfo"
+  ],
+  "scope": "GDN128 reduction and fused-MoE output aggregation only",
+  "reference_native_binary_sha256": "62a768c0cf5f1e5cd20ac76365cd859f17eccfcf24ff1d9107f03a131ef501a1"
+}

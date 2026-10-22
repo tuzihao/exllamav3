@@ -1,0 +1,180 @@
+{
+  "base_commit": "1d71227a7c458228ae80d42e536d08c02883ae51",
+  "patch_id": "issue353-minimal-v1",
+  "environment": {
+    "exllamav3": "0.0.37+cu128.torch2.9.0",
+    "torch": "2.9.0+cu128",
+    "cuda_toolkit": "12.8.93",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell"
+  },
+  "source_integrity": {
+    "original_package_files_checked": 322,
+    "original_package_files_changed": [],
+    "portable_enabled_AST_identical_to_tested_local": true,
+    "extension_sources_identical": true
+  },
+  "arms": {
+    "s0": {
+      "baseline": {
+        "comparisons": 12,
+        "logits_all_equal": false,
+        "max_logprob_difference": 2.1060848236083984,
+        "max_first_logit_relative_l2": 0.2650914713670781
+      },
+      "batch": {
+        "comparisons": 48,
+        "logits_all_equal": true,
+        "max_logprob_difference": 0.0,
+        "max_first_logit_relative_l2": 0.0
+      },
+      "serial": {
+        "comparisons": 48,
+        "logits_all_equal": true,
+        "max_logprob_difference": 0.0,
+        "max_first_logit_relative_l2": 0.0
+      },
+      "batch_vs_serial": {
+        "denominator": "serial first-logit norm, same as frozen evaluator",
+        "comparisons": 144,
+        "max_logprob_difference": 2.049856185913086,
+        "max_first_logit_relative_l2": 0.321674800397604,
+        "failed_probes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "greedy": {
+        "probes": 4,
+        "all_repeat_equal": true,
+        "token_lengths": {
+          "1": [
+            64,
+            64,
+            64
+          ],
+          "2": [
+            64,
+            64,
+            64
+          ],
+          "3": [
+            64,
+            64,
+            64
+          ],
+          "4": [
+            64,
+            64,
+            64
+          ]
+        }
+      },
+      "max_first_token_logprob_recompute_error": 9.461996732795797e-07,
+      "model_manifest_sha256": "470ee0b74ddc74d5d6646e31a509bd6f7d3cfaf57df2700d4c09961ad82e86c6",
+      "peak_torch_allocated_gib": 18.052117824554443,
+      "model_hashes_reverified_after_run": true,
+      "actual_batch64_forward_count": 342
+    },
+    "s1_seed0": {
+      "baseline": {
+        "comparisons": 12,
+        "logits_all_equal": false,
+        "max_logprob_difference": 0.5469245910644531,
+        "max_first_logit_relative_l2": 0.07073312744746142
+      },
+      "batch": {
+        "comparisons": 48,
+        "logits_all_equal": true,
+        "max_logprob_difference": 0.0,
+        "max_first_logit_relative_l2": 0.0
+      },
+      "serial": {
+        "comparisons": 48,
+        "logits_all_equal": true,
+        "max_logprob_difference": 0.0,
+        "max_first_logit_relative_l2": 0.0
+      },
+      "batch_vs_serial": {
+        "denominator": "serial first-logit norm, same as frozen evaluator",
+        "comparisons": 144,
+        "max_logprob_difference": 1.4374732971191406,
+        "max_first_logit_relative_l2": 0.3186490312794796,
+        "failed_probes": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15
+        ]
+      },
+      "greedy": {
+        "probes": 4,
+        "all_repeat_equal": true,
+        "token_lengths": {
+          "1": [
+            64,
+            64,
+            64
+          ],
+          "2": [
+            64,
+            64,
+            64
+          ],
+          "3": [
+            64,
+            64,
+            64
+          ],
+          "4": [
+            64,
+            64,
+            64
+          ]
+        }
+      },
+      "max_first_token_logprob_recompute_error": 1.02045532912598e-06,
+      "model_manifest_sha256": "599c1eebc9bd1dc6991adaf04935de19688c1ddcf8a2761722647f23e16a8707",
+      "peak_torch_allocated_gib": 18.03606367111206,
+      "model_hashes_reverified_after_run": true,
+      "actual_batch64_forward_count": 342
+    }
+  },
+  "s1_seed1": {
+    "tested": false,
+    "reason": "No complete final model; training record has 221 of 256 steps; admission failed before model load"
+  },
+  "gpu_unit_tests": {
+    "tests": 3,
+    "passed": 3
+  },
+  "quality_benchmark_scored": false,
+  "components": {
+    "gdn_cases": 13,
+    "repeats_per_case": 20,
+    "gdn_repeat_equal": true,
+    "gdn_max_state_relative_l2": 2.4533396894703878e-08,
+    "gdn_max_output_relative_l2": 3.161099696648098e-07,
+    "moe_repeat_equal": true,
+    "moe_max_relative_l2": 4.8008453007381764e-08
+  }
+}
