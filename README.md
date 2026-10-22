@@ -1,4 +1,4 @@
-> **Private minimal determinism fork — EXL3 0.0.37.** Adds an opt-in inference
+> **Minimal determinism fork — EXL3 0.0.37.** Adds an opt-in inference
 > patch for upstream issue #353 (GDN-128 and fused-MoE accumulation). Original
 > quantization code and native quantized kernels are retained. Start with the
 > [patch instructions and limitations](doc/issue353-minimal-fix.md) and the

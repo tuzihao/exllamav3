@@ -1,6 +1,6 @@
 # Minimal inference determinism patch for EXL3 0.0.37
 
-This private development fork adds an **explicit, inference-only** patch for
+This development fork adds an **explicit, inference-only** patch for
 the floating-point accumulation nondeterminism discussed in upstream
 [issue #353](https://github.com/turboderp-org/exllamav3/issues/353).
 The base commit is `1d71227a7c458228ae80d42e536d08c02883ae51` (`v0.0.37`).
